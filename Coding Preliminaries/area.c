@@ -3,7 +3,7 @@
 void runArea(){
     char cInput = '0';
     int nCurrentTile = 0;
-    int nAreaSize = 7;
+    int nAreaSize = 9;
 
     do{
         displayArea(nAreaSize, nCurrentTile);
@@ -15,13 +15,25 @@ void runArea(){
 void displayArea(int nAreaSize, int nCurrentTile){
     printf("\n");
     printf("\t");
-    for (int i = 0; i < nAreaSize; i++) printf("┌───┐");
+    for (int i = 0; i <= nAreaSize; i++){
+        if (i < nCurrentTile) printf("┌───┐");
+        if (i == nCurrentTile) printf("╔═══╗");
+        if (i > nCurrentTile) printf("┌───┐");
+    }
     printf("\n");
     printf("\t");
-    for (int i = 0; i < nAreaSize; i++) printf("│   │");
+    for (int i = 0; i <= nAreaSize; i++){
+        if (i < nCurrentTile) printf("│   │");
+        if (i == nCurrentTile) printf("║ ■ ║");
+        if (i > nCurrentTile) printf("│   │");
+    }
     printf("\n");
     printf("\t");
-    for (int i = 0; i < nAreaSize; i++) printf("└───┘");
+    for (int i = 0; i <= nAreaSize; i++){
+        if (i < nCurrentTile) printf("└───┘");
+        if (i == nCurrentTile) printf("╚═══╝");
+        if (i > nCurrentTile) printf("└───┘");
+    }
     printf("\n");
     printf("\t[PLAYER] : ♥ ♥ ♥\n");
     printf("\n");
