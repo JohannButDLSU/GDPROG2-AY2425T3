@@ -2,33 +2,40 @@
 
 void runArea(){
     char cInput = '0';
-    int nCurrentTile = 1;
+    int nCurrentTile = 0;
+    int nAreaSize = 7;
 
     do{
-        displayArea(nCurrentTile);
+        displayArea(nAreaSize, nCurrentTile);
         scanf(" %c", &cInput);
-        processAreaInput(cInput, &nCurrentTile);
+        processAreaInput(nAreaSize, cInput, &nCurrentTile);
     } while (cInput != '0');
 }
 
-void displayArea(int nCurrentTile){
+void displayArea(int nAreaSize, int nCurrentTile){
     printf("\n");
-    printf("\t╔═══╗┌───┐┌───┐┌───┐\n");
-    printf("\t║ ■ ║│   ││   ││   │\n");
-    printf("\t╚═══╝└───┘└───┘└───┘\n");
+    printf("\t");
+    for (int i = 0; i < nAreaSize; i++) printf("┌───┐");
+    printf("\n");
+    printf("\t");
+    for (int i = 0; i < nAreaSize; i++) printf("│   │");
+    printf("\n");
+    printf("\t");
+    for (int i = 0; i < nAreaSize; i++) printf("└───┘");
+    printf("\n");
     printf("\t[PLAYER] : ♥ ♥ ♥\n");
     printf("\n");
     printf("\tCurrent Tile: %d", nCurrentTile);
     printf("\t[INPUT] : ");
 }
 
-void processAreaInput(char cInput, int* nCurrentTile){
+void processAreaInput(int nAreaSize, char cInput, int* nCurrentTile){
     switch(cInput){
         case 'a':
-            (*nCurrentTile) --;
+            if ((*nCurrentTile) > 0) (*nCurrentTile) --;
             break;
         case 'd':
-            (*nCurrentTile) ++;
+            if ((*nCurrentTile) < nAreaSize) (*nCurrentTile) ++;
         default:
             break;
     }

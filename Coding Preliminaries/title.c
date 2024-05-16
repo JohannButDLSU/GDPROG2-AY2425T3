@@ -16,7 +16,7 @@ void displayTitle(){
     printf("\t│        Title       │\n");
     printf("\t╚════════════════════╝\n");
     printf("\t[1] Yeah\n");
-    printf("\n");
+    printf("\tInput: ");
 }
 
 void processTitleInput(int nInput){
