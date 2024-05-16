@@ -1,5 +1,6 @@
 #pragma once
 #include "character_creation.h"
+#include "area.h"
 
 void runTitle();
 

@@ -22,7 +22,7 @@ void displayTitle(){
 void processTitleInput(int nInput){
     switch(nInput){
         case 1:
-            runCharacterCreation();
+            runArea();
             break;
     }
 }
