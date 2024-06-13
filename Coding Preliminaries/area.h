@@ -4,4 +4,4 @@ void runArea();
 
 void displayArea(int nAreaSize, int nCurrentTile);
 
-void processAreaInput(int nAreaSize, char cInput, int* nCurrentTile);
+void processAreaInput(char cInput, int* nCurrentTile, int nAreaSize, int nArea[nAreaSize]);

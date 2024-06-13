@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "character_creation.h": "c"
+        "character_creation.h": "c",
+        "inventory.h": "c"
     }
 }
